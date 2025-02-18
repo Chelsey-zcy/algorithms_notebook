@@ -1,0 +1,26 @@
+{
+  "name": "algorithms_nodebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx",
+    "run-ts": "ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chelsey-zcy/algorithms_notebook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chelsey-zcy/algorithms_notebook/issues"
+  },
+  "homepage": "https://github.com/Chelsey-zcy/algorithms_notebook#readme",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "configurations": [
+
+    {
+      "name": "Debug current TS file",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "test",
+        "${relativeFile}"
+      ],
+      "cwd": "${workspaceRoot}",
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+
+    {
+      "name": "Run current TS file",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "run-ts",
+        "--",
+        "${relativeFile}"
+      ],
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}
