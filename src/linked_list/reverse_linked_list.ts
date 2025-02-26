@@ -1,11 +1,23 @@
 import { createLinkedList, ListNode } from './utils/create_linked_list'
 // Three ways to reverse a linked list
 //1. Sliding pointers with three pointers (r, q, p)
-
+function ReverseLinkedList(head: ListNode | null): ListNode | null {
+  let r = null
+  let q = null
+  let p = head
+  while (p) {
+    r = q
+    q = p
+    p = p.next
+    q.next = r
+  }
+  head = q
+  return head
+}
 
 //2. Three pointers prev, cur and next
 
-function ReverseLinkedList2 (head: ListNode | null): ListNode | null {
+function ReverseLinkedList2(head: ListNode | null): ListNode | null {
     let prev = null
     let cur = head
     let next
@@ -21,13 +33,8 @@ function ReverseLinkedList2 (head: ListNode | null): ListNode | null {
 
 
 //3. sRecursive
-function RecursiveReverse (q: ListNode | null, head: ListNode | null): ListNode | null {
-    if (head) {
-      RecursiveReverse(head, head.next)
-      head.next = q
-    }
-      head = q
-    return head
+function RecursiveReverse(head: ListNode | null): ListNode | null {
+   
 }
 
 
